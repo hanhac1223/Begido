@@ -70,11 +70,14 @@
         background: linear-gradient(0deg, #000 0, transparent 100%);
     }
 
-    .khung-tin-tuc {
+    .khung-tin-tuc{
         width: 393px;
         height: 210.344px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
     }
-
     .chu-tieu-de-tin-tuc {
         position: absolute;
         left: 15px;
@@ -130,6 +133,7 @@
         height: 84px;
     }
 
+    
 </style>
 <div class="container-fluid">
     <div class="row cang-le">
@@ -148,7 +152,7 @@
         @for($i=0; $i<3; $i++)
             <div class="col-md-4">
                 <a href="{{ url('tintucchitiet') }}">
-                    <div class="col-12">
+                    <div class="col-12 ">
 
                         <img src="{{ asset("images/kham-pha-the-gioi-giai-tri-dinh-cao-voi-5-mau-android-tv-box-duoc-chon-mua-nhieu-nhat-nam-2017.jpg") }}"
                              alt="" class="khung-tin-tuc">
