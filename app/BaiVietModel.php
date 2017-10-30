@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class BaiVietModel extends Model
 {
     public $msbiviet;
-    public $msdanhmucbaiviet;
+    public $danhmucbaiviet;
     public $tieude;
     public $noidung;
     public $url;
@@ -17,6 +17,11 @@ class BaiVietModel extends Model
     public $trangthai;
     public $luotxem;
     public $nhan;
+
+    public function  __construct()
+    {
+        $this->danhmucbaiviet = new DanhMucBaiVietModel();
+    }
 
     public function  LayDanhSachBaiViet(){
         $query = "âcs";
