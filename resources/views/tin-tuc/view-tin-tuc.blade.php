@@ -19,27 +19,27 @@
         </div>
     </div>
     <div class="row">
-        @for($i = 0; $i < 10; $i++)
+        @foreach($DSBaiViet as $item)
             <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
-                <a href="">
+                <a href="{{ $item->url  }}">
                     <amp-img
                             src="{{ asset("images/kham-pha-the-gioi-giai-tri-dinh-cao-voi-5-mau-android-tv-box-duoc-chon-mua-nhieu-nhat-nam-2017.jpg") }}"
                             alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
                     </amp-img>
                     <div class="relative">
                         <span class="tieu-de-bai-viet">
-                            <b>Tự ráp máy tính chơi game với bo mạch chủ và card màn hình Gigabyte giá chưa đến 5 triệu đồng </b>
+                            <b>{{ \Illuminate\Support\Str::words($item->tieude, 10,'....') }}</b>
                         </span>
                     </div>
                     <div class="noi-dung">
                         <small>20/11/2017 | ed</small>
-                        <p> Thị trường máy tính chơi game giá rẻ đang trong lúc sôi động có thể làm bạn chùn bước tự ráp cho mình một chiếc máy tính chơi game. </p>
+                        <p>{{ \Illuminate\Support\Str::words($item->noidung, 10,'....') }}</p>
                     </div>
                     @for($j = 0; $j < rand(0, 10); $j++)
                         <a class="tag" href="#"> Son môi </a>
                     @endfor
                 </a>
             </div>
-        @endfor
+        @endforeach
     </div>
 @endsection

@@ -17,6 +17,8 @@ class BaiVietModel extends Model
     public $trangthai;
     public $luotxem;
     public $nhan;
+    public $searchtitle;
+    public $searchdescription;
 
     public function  __construct()
     {
@@ -24,13 +26,42 @@ class BaiVietModel extends Model
     }
 
     public function  LayDanhSachBaiViet(){
-        $query = "âcs";
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"";
         $data = DB::select($query);
         return $data;
     }
 
-    public function  TimBaiViet($noiDung){
-        $query = "âcs";
+    public function  BaiVietChiTiet(){
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"
+                    WHERE  url = '$this->url'";
         $data = DB::select($query);
         return $data;
     }

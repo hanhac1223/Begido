@@ -5,8 +5,4 @@ Route::get('/amp', function () {
 
 Route::get('/', "BaiVietController@LayDanhSachBaiViet");
 
-Route::prefix('template')->group(function (){
-    Route::get('/them', 'TemplateController@DanhSach');
-    Route::post('postThem', 'TemplateController@postThem');
-
-});
+Route::get('/{plug}',"BaiVietController@BaiVietChiTiet");
