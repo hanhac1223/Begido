@@ -45,6 +45,28 @@ class BaiVietModel extends Model
         return $data;
     }
 
+    public function  LayDanhSachBaiVietTheoDanhMuc($danhmucbaiviet){
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"
+                    WHERE \"msdanhmucbaiviet\" = '$danhmucbaiviet'
+                    LIMIT 6";
+        $data = DB::select($query);
+        return $data;
+    }
+
     public function  BaiVietChiTiet(){
         $query = "SELECT
                       msbaiviet,

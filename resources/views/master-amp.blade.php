@@ -9,6 +9,7 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <style amp-custom>
         @php( require ("../public/css/bootstrap/bootstrap-grid.min.css"))
         @php( require ("../public/css/bootstrap/breadcrumb.css"))
@@ -52,7 +53,9 @@
 <div class="container header">
     <div class="row border-header">
         <div class="col-2">
-            <amp-img class="logo-begido" src="../public/cdn/begido-300x100.png" height="1" width="1" layout="responsive"></amp-img>
+            <a href="/">
+                <amp-img class="logo-begido" src="../public/cdn/begido-300x100.png" height="1" width="1" layout="responsive"></amp-img>
+            </a>
         </div>
         <div class="col-8">
             <ul class="menu-destop">
@@ -91,7 +94,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-12">
-                <amp-img src="../public/cdn/begido-logo.png" height="100" width="300">
+                <amp-img src="../public/cdn/begido-300x100.png" height="100" width="300">
                 </amp-img>
             </div>
             <div class="col-md-4 col-12">

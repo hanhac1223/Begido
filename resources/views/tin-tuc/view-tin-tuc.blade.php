@@ -5,39 +5,118 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <nav aria-label="breadcrumb" role="navigation">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                </ol>
-            </nav>
+            <h3><a href="#">Son</a></h3>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <h3><a href="#">Tin đồng hồ</a></h3>
-        </div>
-    </div>
-    <div class="row">
-        @foreach($DSBaiViet as $item)
+        @foreach($Son as $item)
             <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
                 <a href="{{ $item->url  }}">
                     <amp-img
-                            src="{{ asset("images/kham-pha-the-gioi-giai-tri-dinh-cao-voi-5-mau-android-tv-box-duoc-chon-mua-nhieu-nhat-nam-2017.jpg") }}"
+                            src="{!! $item->anhdaidien !!}"
                             alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
                     </amp-img>
                     <div class="relative">
                         <span class="tieu-de-bai-viet">
-                            <b>{{ \Illuminate\Support\Str::words($item->tieude, 10,'....') }}</b>
+                            <b>{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</b>
                         </span>
                     </div>
                     <div class="noi-dung">
-                        <small>20/11/2017 | ed</small>
-                        <p>{{ \Illuminate\Support\Str::words($item->noidung, 10,'....') }}</p>
+                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
+                        <p>{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</p>
                     </div>
-                    @for($j = 0; $j < rand(0, 10); $j++)
-                        <a class="tag" href="#"> Son môi </a>
-                    @endfor
+                    <?php
+                        $arrTag = explode (',', $item->nhan);
+                        foreach ($arrTag as $tag) {
+                            if( strlen(trim($tag)) > 0 ){
+                                echo "<a class='tag' href='#'>$tag</a>";
+                            }
+                        }
+                    ?>
+                </a>
+            </div>
+        @endforeach
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3><a href="#">Mỹ phẩm trang điểm</a></h3>
+        </div>
+    </div>
+    <div class="row">
+        @foreach($Son as $item)
+            <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
+                <a href="{{ $item->url  }}">
+                    <amp-img
+                            src="{!! $item->anhdaidien !!}"
+                            alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
+                    </amp-img>
+                    <div class="relative">
+                        <span class="tieu-de-bai-viet">
+                            <b>{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</b>
+                        </span>
+                    </div>
+                    <div class="noi-dung">
+                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
+                        <p>{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</p>
+                    </div>
+                    <?php
+                    $arrTag = explode (',', $item->nhan);
+                    foreach ($arrTag as $tag) {
+                        ?>
+                    <?php
+                        if( strlen(trim($tag)) > 0 ){
+                            echo "<a class='tag' href='#'>$tag</a>";
+                        }
+                        ?>
+                    <?php
+                    }
+                    ?>
+                </a>
+            </div>
+        @endforeach
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3><a href="#">Chăm sóc da</a></h3>
+        </div>
+    </div>
+    <div class="row">
+        @foreach($Son as $item)
+            <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
+                <a href="{{ $item->url  }}">
+                    <amp-img
+                            src="{!! $item->anhdaidien !!}"
+                            alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
+                    </amp-img>
+                    <div class="relative">
+                        <span class="tieu-de-bai-viet">
+                            <b>{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</b>
+                        </span>
+                    </div>
+                    <div class="noi-dung">
+                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
+                        <p>{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</p>
+                    </div>
+                    <?php
+                    $arrTag = explode (',', $item->nhan);
+                    foreach ($arrTag as $tag) {
+                        ?>
+                    <?php
+                        if( strlen(trim($tag)) > 0 ){
+                            echo "<a class='tag' href='#'>$tag</a>";
+                        }
+                        ?>
+                    <?php
+                    }
+                    ?>
                 </a>
             </div>
         @endforeach
