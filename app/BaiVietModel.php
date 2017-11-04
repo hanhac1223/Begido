@@ -3,168 +3,88 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class BaiVietModel extends Model
 {
-    private $MSBAIVIET;
-    private $TIEUDE;
-    private $NOIDUNG;
-    private $URL;
-    private $ANHDAIDIEN;
-    private $NGAYTAO;
-    private $TRANGTHAI;
-    private $LUOTXEM;
+    public $msbiviet;
+    public $danhmucbaiviet;
+    public $tieude;
+    public $noidung;
+    public $url;
+    public $anhdaidien;
+    public $ngaytaobaiviet;
+    public $trangthai;
+    public $luotxem;
+    public $nhan;
+    public $searchtitle;
+    public $searchdescription;
 
-    /**
-     * BaiVietModel constructor.
-     * @param $MSBAIVIET
-     * @param $TIEUDE
-     * @param $NOIDUNG
-     * @param $URL
-     * @param $ANHDAIDIEN
-     * @param $NGAYTAO
-     * @param $TRANGTHAI
-     * @param $LUOTXEM
-     */
-    public function __construct($MSBAIVIET, $TIEUDE, $NOIDUNG, $URL, $ANHDAIDIEN, $NGAYTAO, $TRANGTHAI, $LUOTXEM)
+    public function  __construct()
     {
-        $this->MSBAIVIET = $MSBAIVIET;
-        $this->TIEUDE = $TIEUDE;
-        $this->NOIDUNG = $NOIDUNG;
-        $this->URL = $URL;
-        $this->ANHDAIDIEN = $ANHDAIDIEN;
-        $this->NGAYTAO = $NGAYTAO;
-        $this->TRANGTHAI = $TRANGTHAI;
-        $this->LUOTXEM = $LUOTXEM;
+        $this->danhmucbaiviet = new DanhMucBaiVietModel();
     }
 
-    /**
-     * @return array
-     */
-    public function getMSBAIVIET()
-    {
-        return $this->MSBAIVIET;
+    public function  LayDanhSachBaiViet(){
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"";
+        $data = DB::select($query);
+        return $data;
     }
 
-    /**
-     * @param array $MSBAIVIET
-     */
-    public function setMSBAIVIET($MSBAIVIET)
-    {
-        $this->MSBAIVIET = $MSBAIVIET;
+    public function  LayDanhSachBaiVietTheoDanhMuc($danhmucbaiviet){
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"
+                    WHERE \"msdanhmucbaiviet\" = '$danhmucbaiviet'
+                    LIMIT 6";
+        $data = DB::select($query);
+        return $data;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTIEUDE()
-    {
-        return $this->TIEUDE;
+    public function  BaiVietChiTiet(){
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"
+                    WHERE  url = '$this->url'";
+        $data = DB::select($query);
+        return $data;
     }
-
-    /**
-     * @param mixed $TIEUDE
-     */
-    public function setTIEUDE($TIEUDE)
-    {
-        $this->TIEUDE = $TIEUDE;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNOIDUNG()
-    {
-        return $this->NOIDUNG;
-    }
-
-    /**
-     * @param mixed $NOIDUNG
-     */
-    public function setNOIDUNG($NOIDUNG)
-    {
-        $this->NOIDUNG = $NOIDUNG;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getURL()
-    {
-        return $this->URL;
-    }
-
-    /**
-     * @param mixed $URL
-     */
-    public function setURL($URL)
-    {
-        $this->URL = $URL;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getANHDAIDIEN()
-    {
-        return $this->ANHDAIDIEN;
-    }
-
-    /**
-     * @param mixed $ANHDAIDIEN
-     */
-    public function setANHDAIDIEN($ANHDAIDIEN)
-    {
-        $this->ANHDAIDIEN = $ANHDAIDIEN;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNGAYTAO()
-    {
-        return $this->NGAYTAO;
-    }
-
-    /**
-     * @param mixed $NGAYTAO
-     */
-    public function setNGAYTAO($NGAYTAO)
-    {
-        $this->NGAYTAO = $NGAYTAO;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTRANGTHAI()
-    {
-        return $this->TRANGTHAI;
-    }
-
-    /**
-     * @param mixed $TRANGTHAI
-     */
-    public function setTRANGTHAI($TRANGTHAI)
-    {
-        $this->TRANGTHAI = $TRANGTHAI;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLUOTXEM()
-    {
-        return $this->LUOTXEM;
-    }
-
-    /**
-     * @param mixed $LUOTXEM
-     */
-    public function setLUOTXEM($LUOTXEM)
-    {
-        $this->LUOTXEM = $LUOTXEM;
-    }
-
-
 }
