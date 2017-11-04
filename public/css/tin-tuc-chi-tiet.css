@@ -1,0 +1,42 @@
+.padding-noi-dung-tin-tuc{
+    padding-top: 5px;
+}
+.div-tin-tuc-goi-y {
+    margin-left: 0px;
+}
+.tin-tuc-moi{
+    margin-bottom: 10px;
+}
+.tin-tuc-moi span{
+    font-size: 13px;
+}
+amp-social-share {
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    background-size: 30px;
+}
+.tag {
+    padding: .3rem 1rem;
+    white-space: nowrap;
+    border-radius: .8rem;
+    background: #f2f2f2;
+    color: inherit;
+    font-size: 14px;
+    display: inline-table;
+    margin: 5px 5px 5px 0px;
+}
+.anh-dai-dien-tin-tuc-moi{
+    width: 100%;
+}
+@media(min-width:  768px){
+    .div-tin-tuc-goi-y{
+        margin-left: 50px;
+    }
+}
+.margin-bottom-5{
+    margin-bottom: 5px;
+}
