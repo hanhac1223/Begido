@@ -47,7 +47,7 @@
         </div>
     </div>
     <div class="row">
-        @foreach($Son as $item)
+        @foreach($MyPhamTraDiem as $item)
             <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
                 <a href="{{ $item->url  }}">
                     <amp-img
@@ -89,7 +89,7 @@
         </div>
     </div>
     <div class="row">
-        @foreach($Son as $item)
+        @foreach($ChamSocDa as $item)
             <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
                 <a href="{{ $item->url  }}">
                     <amp-img

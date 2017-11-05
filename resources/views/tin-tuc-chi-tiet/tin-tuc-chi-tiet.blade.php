@@ -1,4 +1,7 @@
 @extends('master-amp')
+@section('share-amp')
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+@endsection
 @section('style-amp')
     @php( require ("../public/css/tin-tuc-chi-tiet.css"))
 @endsection
@@ -50,27 +53,27 @@
             <div class="col-md-8 padding-noi-dung-tin-tuc">
                 <div class="tin-tuc-chi-tiet">
                         {!! $item->noidung  !!}
-                    <div style="margin-top: 40px;">
-                        <h3 style="margin-bottom: 20px;"><b>Bình luận người dùng</b></h3>
+                    <div>
+                        <h1><b>Bình luận người dùng</b></h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="div-tin-tuc-goi-y">
-                    <h2>Bài viết liên quan</h2>
-                    @for($i = 0; $i < 3; $i++)
+                    <h1>Bài viết liên quan</h1>
+                    @foreach($BaiVietLienQuan as $bvlq)
                         <div class="row tin-tuc-moi">
                             <div class="col-12">
-                                <a href="#">
-                                    <amp-img alt src="{{ asset("images/apple-3.png") }}" class="anh-dai-dien-tin-tuc-moi"
+                                <a href="{{$bvlq->url}}">
+                                    <amp-img alt src="{{ $bvlq->anhdaidien }}" class="anh-dai-dien-tin-tuc-moi"
                                              height="400" width="800" layout="responsive">
                                     </amp-img>
                                     <br/>
-                                    <h4><b>Đồng hồ thông minh Apple Watch series 3 có đủ khả năng thay thế iPhone?</b></h4>
+                                    <h4><b>{{$bvlq->tieude}}</b></h4>
                                 </a>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                     <h1>Thẻ tag</h1>
                     <a class="tag" href="#"> Đồng hồ </a>
                 </div>

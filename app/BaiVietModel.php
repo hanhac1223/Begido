@@ -87,4 +87,31 @@ class BaiVietModel extends Model
         $data = DB::select($query);
         return $data;
     }
+
+    public function BaiVietLienQuan( ){
+        $query = "SELECT
+                      msbaiviet,
+                      msuser,
+                      msdanhmucbaiviet,
+                      tieude,
+                      noidung,
+                      url,
+                      anhdaidien,
+                      ngaytaobaiviet,
+                      trangthai,
+                      luotxem,
+                      nhan,
+                      searchtitle,
+                      searchdescription
+                    FROM public.\"baiviet\"
+                    WHERE \"msdanhmucbaiviet\" IN (
+                        SELECT msdanhmucbaiviet
+                        FROM baiviet
+                        WHERE
+                          url = '$this->url')
+                    ORDER BY luotxem DESC
+                    LIMIT 6";
+        $data = DB::select($query);
+        return $data;
+    }
 }

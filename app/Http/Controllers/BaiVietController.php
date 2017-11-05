@@ -20,6 +20,10 @@ class BaiVietController extends Controller
     public function BaiVietChiTiet(Request $request, $plug){
         $bv = new BaiVietModel();
         $bv->url = $plug;
-        return view("tin-tuc-chi-tiet.tin-tuc-chi-tiet", ["BaiViet" => $bv->BaiVietChiTiet()]);
+        return view("tin-tuc-chi-tiet.tin-tuc-chi-tiet",
+            [
+                "BaiViet" => $bv->BaiVietChiTiet(),
+                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
+            ]);
     }
 }

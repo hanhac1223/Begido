@@ -40,3 +40,16 @@ amp-social-share {
 .margin-bottom-5{
     margin-bottom: 5px;
 }
+
+h1{ font-size: 22px; }
+h2{ font-size: 20px; }
+h3{ font-size: 18px; }
+h4{ font-size: 16px; }
+h5{ font-size: 14px; }
+h6{ font-size: 12px; }
+p {font-size: 14px; }
+h1, h2, h3, h4, h5, h6, p{
+    word-wrap: break-word;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
