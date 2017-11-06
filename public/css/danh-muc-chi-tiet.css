@@ -16,22 +16,40 @@
     left: 0;
     bottom: 0;
     padding: 10px;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.74), #434343);
     display:block;
+    font-weight: 700;
 }
 
 .danh-sach-tin-tuc .duoi .thong-tin {
     margin-top: 7px;
     font-size: 13px;
 }
+
+.danh-sach-tin-tuc .duoi .thong-tin a {
+    color: black;
+}
+
 .danh-sach-tin-tuc .duoi .noi-dung-chi-tiet {
     margin-top: 7px;
 }
 
 .danh-sach-tin-tuc .duoi .noi-dung-chi-tiet  a{
-    font-size: 17px;
+    font-size: 16px;
     color: black;
     text-align:justify;
+}
+
+@media (min-width: 576px) and (max-width:992px) {
+    .danh-sach-tin-tuc .tieu-de {
+        font-size:12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .danh-sach-tin-tuc .mot-tin {
+        margin-bottom: 30px;
+    }
 }
