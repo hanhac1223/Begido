@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     @yield('share-amp')
     <style amp-custom>
@@ -50,40 +51,48 @@
         </li>
     </ul>
 </amp-sidebar>
-<div class="container header">
-    <div class="row border-header">
-        <div class="col-2">
-            <a href="/">
-                <amp-img class="logo-begido" src="{{ asset("cdn/begido-300x100.png")  }}" height="1" width="1" layout="responsive"></amp-img>
-            </a>
+<div class="container-fluid background-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <a href="/">
+                    <amp-img class="logo-begido" src="{{ asset("cdn/doi-mau-begido-300x100.png")  }}" height="1" width="1" layout="responsive"></amp-img>
+                </a>
+            </div>
+            <div class="col-10">
+                <amp-img role="button" tabindex="0" on="tap:sidebar.toggle" class="open-sidebar" src="{{asset('cdn/menu.png')}}" height="20" width="20">
+                </amp-img>
+                <amp-img class="search-icon" src="{{asset('cdn/search.png')}}" height="20" width="20">
+                </amp-img>
+            </div>
         </div>
-        <div class="col-8">
-            <ul class="menu-destop">
-                <li>
-                    <a href="#">Son môi</a>
-                </li>
-                <li>
-                    <a href="#">Mỹ phẩm trang điểm</a>
-                </li>
-                <li>
-                    <a href="#">Chăm sóc da</a>
-                </li>
-                <li>
-                    <a href="#">Nước hoa</a>
-                </li>
-                <li>
-                    <a href="#"> Làm đẹp bằng Vitamins </a>
-                </li>
-                <li>
-                    <a href="#"> Hướng dẫn</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-2">
-            <amp-img role="button" tabindex="0" on="tap:sidebar.toggle" class="open-sidebar" src="{{asset('cdn/menu.png')}}" height="20" width="20">
-            </amp-img>
-            <amp-img class="search-icon" src="{{asset('cdn/search.png')}}" height="20" width="20">
-            </amp-img>
+    </div>
+</div>
+<div class="container-fluid background-menu">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12">
+                <ul class="menu-destop">
+                    <li>
+                        <a href="#">Son môi</a>
+                    </li>
+                    <li>
+                        <a href="#">Mỹ phẩm trang điểm</a>
+                    </li>
+                    <li>
+                        <a href="#">Chăm sóc da</a>
+                    </li>
+                    <li>
+                        <a href="#">Nước hoa</a>
+                    </li>
+                    <li>
+                        <a href="#"> Làm đẹp bằng Vitamins </a>
+                    </li>
+                    <li>
+                        <a href="#"> Hướng dẫn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
