@@ -18,7 +18,8 @@
     padding: 10px;
     font-size: 18px;
     color: white;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), #434343)
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), #434343);
+    display:block;
 }
 
 .danh-sach-tin-tuc .duoi .thong-tin {
