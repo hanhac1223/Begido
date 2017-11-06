@@ -114,4 +114,6 @@ class BaiVietModel extends Model
         $data = DB::select($query);
         return $data;
     }
+
+
 }

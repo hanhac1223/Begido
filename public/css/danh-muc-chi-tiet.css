@@ -36,10 +36,38 @@
     margin-top: 7px;
 }
 
+
+
 .danh-sach-tin-tuc .duoi .noi-dung-chi-tiet  a{
     font-size: 16px;
     color: black;
     text-align:justify;
+}
+
+.gioi-thieu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.gioi-thieu .khoi-gioi-thieu {
+    padding-bottom: 30px;
+}
+
+.gioi-thieu .hinh-anh img{
+    width: 100%;
+    height: 100%;
+    padding-right:13px;
+}
+
+.gioi-thieu .tieu-de {
+    font-size: 20px;
+    font-weight: 600;
+    display:block;
+    margin-bottom:10px;
+}
+
+.gioi-thieu .de-nghi {
+    margin-top: 20px;
 }
 
 @media (min-width: 576px) and (max-width:992px) {
@@ -53,3 +81,5 @@
         margin-bottom: 30px;
     }
 }
+
+

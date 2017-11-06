@@ -5,6 +5,8 @@
 
 Route::get('/', "BaiVietController@LayDanhSachBaiViet");
 
-//Route::get('/{plug}',"BaiVietController@BaiVietChiTiet");
+Route::get('baiviet/{plug}',"BaiVietController@BaiVietChiTiet");
 
-Route::get('/danhmuc',"DanhMucController@getDanhMuc");
+Route::get('danhmuc',"DanhMucController@getDanhMuc");
+
+//Route::get('danhmuc/{plug}',"DanhMucController@getDanhMuc");
