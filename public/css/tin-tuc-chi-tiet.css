@@ -7,8 +7,20 @@
 .tin-tuc-moi{
     margin-bottom: 10px;
 }
-.tin-tuc-moi span{
-    font-size: 13px;
+.tin-tuc-moi p{
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(8, 106, 135);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
 }
 amp-social-share {
     background-repeat: no-repeat;
@@ -40,28 +52,27 @@ amp-social-share {
 .margin-bottom-5{
     margin-bottom: 5px;
 }
-
-h1{ font-size: 22px; }
-h2{ font-size: 20px; }
-h3{ font-size: 18px; }
-h4{ font-size: 16px; }
-h5{ font-size: 14px; }
-h6{ font-size: 12px; }
-p {font-size: 14px; }
-h1, h2, h3, h4, h5, h6, p{
-    word-wrap: break-word;
-    line-height: 26px;
-    margin-bottom: 10px;
-}
-
 .list-danh-muc-tin-tuc{
     list-style-type: none;
     margin-left: -40px;
 }
 .list-danh-muc-tin-tuc li{
     padding: 1.5rem 0px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(221, 221, 221);
     color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(8, 106, 135);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
 }
 .icon-right{
     width: 16px;
@@ -70,4 +81,80 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .tieu-de{
     font-size: 28px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color: rgb(51, 51, 51);
+}
+.thong-tin-vai-viet small{
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(102, 102, 102);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color: rgb(102, 102, 102);
+}
+.tin-tuc-chi-tiet p{
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 22px;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    background-repeat: repeat;
+    color: rgb(51, 51, 51);
+}
+.tin-tuc-chi-tiet h2{
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+}
+.tin-tuc-chi-tiet h3{
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
 }

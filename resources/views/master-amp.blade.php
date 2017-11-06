@@ -96,7 +96,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container text-content-section">
     @yield('content')
 </div>
 <div class="container-fluid footer">
@@ -107,14 +107,14 @@
                 </amp-img>
             </div>
             <div class="col-md-4 col-12">
-                <h3>Về chúng tôi</h3>
-                <p>
+                <h1>Về chúng tôi</h1>
+                <p class="ve-chung-toi">
                     Chia sẻ kiến thức làm đẹp, review mỹ phẩm, thương hiệu mỹ phẩm, chọn mua thành phần mỹ phẩm, mẹo làm đẹp, xu hướng làm đẹp, kinh nghiệm làm đẹp…
                     <br>Email: hello@begido.com
                 </p>
             </div>
             <div class="col-md-4 col-12">
-                <h3>Theo dõi chúng tôi</h3>
+                <h1>Theo dõi chúng tôi</h1>
             </div>
         </div>
     </div>

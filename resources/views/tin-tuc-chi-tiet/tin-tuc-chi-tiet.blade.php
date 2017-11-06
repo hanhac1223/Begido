@@ -13,18 +13,18 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Xu hướng</a></li>
                         <li class="breadcrumb-item"><a href="#">Thời trang & Làm đẹp</a></li>
-                        <li class="breadcrumb-item"><a>Khám phá bộ sưu tập đồng hồ nam Citizen Eco Drive One tạo dấu ấn tại BaselWorld 2017</a></li>
+                        <li class="breadcrumb-item"><a>{!! $item->tieude  !!}</a></li>
                     </ol>
                 </nav>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <h1 class="tieu-de"><b>{!! $item->tieude  !!}</b></h1>
+                <p class="tieu-de">{!! $item->tieude  !!}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 thong-tin-vai-viet">
                 <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
             </div>
         </div>
@@ -88,7 +88,7 @@
                                              height="400" width="800" layout="responsive">
                                     </amp-img>
                                     <br/>
-                                    <h4><b>{{$bvlq->tieude}}</b></h4>
+                                    <p>{{$bvlq->tieude}}</p>
                                 </a>
                             </div>
                         </div>

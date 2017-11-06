@@ -1,12 +1,8 @@
 <?php
-//Route::get('/amp', function () {
-//    return view('master-amp');
-//});
-
 Route::get('/', "BaiVietController@LayDanhSachBaiViet");
 
-Route::get('baiviet/{plug}',"BaiVietController@BaiVietChiTiet");
+Route::get('bai-viet/{plug}',"BaiVietController@BaiVietChiTiet");
 
-Route::get('danhmuc',"DanhMucController@getDanhMuc");
+Route::get('/damh-muc',"DanhMucController@getDanhMuc");
 
-//Route::get('danhmuc/{plug}',"DanhMucController@getDanhMuc");
+Route::get('/damh-muc/{plug}',"DanhMucController@getDanhMuc");
