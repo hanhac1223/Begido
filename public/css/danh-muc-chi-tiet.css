@@ -92,6 +92,11 @@
     font-size:14px;
 }
 
+.noi-dung-them {
+    color: #333;
+    margin-bottom: 50px;
+}
+
 @media (min-width: 576px) and (max-width:992px) {
     .danh-sach-tin-tuc .tieu-de {
         font-size:12px;
