@@ -53,3 +53,21 @@ h1, h2, h3, h4, h5, h6, p{
     line-height: 26px;
     margin-bottom: 10px;
 }
+
+.list-danh-muc-tin-tuc{
+    list-style-type: none;
+    margin-left: -40px;
+}
+.list-danh-muc-tin-tuc li{
+    padding: 1.5rem 0px;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+}
+.icon-right{
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+.tieu-de{
+    font-size: 28px;
+}

@@ -1,3 +1,41 @@
+@font-face {
+    font-family: "Noto Sans";
+    src: url("https://fonts.googleapis.com/css?family=Noto+Sans");
+}
+
+body {
+    font-family: "Noto Sans", "Noto Sans Thai";
+}
+
+.header a{
+    color: #f1868a;
+}
+.background-menu{
+    background: #f2f2f2;
+}
+.menu-destop li a{
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(8, 106, 135);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+}
+
+.menu-destop li:hover {
+    border-bottom: 3px solid #f1868a;
+    margin-bottom: -3px;
+}
+.background-header{
+    background: linear-gradient(270deg,#F62459 0,#E08283 100%);
+}
 .logo-begido{
     width: 100px;
     height: 33px;
@@ -25,7 +63,7 @@ a{
 }
 .footer{
     height: 100%;
-    background: #b1b7ba;
+    background: #f2f2f2;
 }
 .footer .container{
     padding-top: 50px;
@@ -70,6 +108,7 @@ a{
         width: 100px;
         height: 33px;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
 @media (min-width: 768px) {
@@ -127,10 +166,11 @@ a{
     }
     .open-sidebar{
         display: none;
+        margin-top: 20px;
     }
     .search-icon{
-        margin-top: 7px;
         float: right;
         display: block;
+        margin-top: 17px;
     }
 }

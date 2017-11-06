@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h3><a href="#">Son</a></h3>
+            <h3 class="header"><a href="#">Son dưỡng</a></h3>
         </div>
     </div>
     <div class="row">
@@ -43,7 +43,7 @@
 
     <div class="row">
         <div class="col-12">
-            <h3><a href="#">Mỹ phẩm trang điểm</a></h3>
+            <h3 class="header"><a href="#">Mỹ phẩm trang điểm</a></h3>
         </div>
     </div>
     <div class="row">
@@ -85,7 +85,7 @@
 
     <div class="row">
         <div class="col-12">
-            <h3><a href="#">Chăm sóc da</a></h3>
+            <h3 class="header"><a href="#">Chăm sóc da</a></h3>
         </div>
     </div>
     <div class="row">
