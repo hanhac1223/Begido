@@ -70,6 +70,28 @@
     margin-top: 20px;
 }
 
+.khoi-tieu-de-lon {
+    margin-bottom:30px;
+}
+
+.khoi-tieu-de-lon .tieu-de-lon {
+
+}
+
+.danh-muc-lien-quan {
+    margin-bottom: 50px;
+}
+
+.danh-muc-lien-quan img {
+    width: 100%;
+    margin-bottom: 10px;
+    padding:5px;
+}
+
+.noi-dung-danh-muc {
+    font-size:14px;
+}
+
 @media (min-width: 576px) and (max-width:992px) {
     .danh-sach-tin-tuc .tieu-de {
         font-size:12px;
