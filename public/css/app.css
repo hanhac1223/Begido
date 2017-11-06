@@ -3,9 +3,24 @@
     src: url("https://fonts.googleapis.com/css?family=Noto+Sans");
 }
 
-body {
-    font-family: "Noto Sans", "Noto Sans Thai";
+html {
+    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    overflow-x: hidden
 }
+html.fonts-loading {
+    font-family: sans-serif
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400
+}
+
 
 .header a{
     color: #f1868a;
