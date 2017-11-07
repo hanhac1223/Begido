@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class DanhMucBaiVietModel extends Model
 {
@@ -28,7 +29,15 @@ class DanhMucBaiVietModel extends Model
                       searchtitle,
                       searchdescription
                     FROM public.\"baiviet\"
-                    WHERE \"msdanhmucbaiviet\" = '$msdanhmucbaiviet'";
+                    WHERE \"msdanhmucbaiviet\" = '$this->msdanhmucbaiviet'";
+        $data = DB::select($query);
+        return $data;
+    }
+
+    public function DanhSach($limit) {
+        $query = "SELECT  * FROM public.danhmucbaiviet
+                    ORDER BY tongbaiviet DESC, tendanhmucbaiviet
+                    LIMIT $limit";
         $data = DB::select($query);
         return $data;
     }

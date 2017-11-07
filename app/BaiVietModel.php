@@ -48,7 +48,7 @@ class BaiVietModel extends Model
     public function  LayDanhSachBaiVietTheoDanhMuc($danhmucbaiviet){
         $query = "SELECT
                       msbaiviet,
-                      msuser,
+                      bv.msuser,
                       msdanhmucbaiviet,
                       tieude,
                       noidung,
@@ -59,9 +59,13 @@ class BaiVietModel extends Model
                       luotxem,
                       nhan,
                       searchtitle,
-                      searchdescription
-                    FROM public.\"baiviet\"
-                    WHERE \"msdanhmucbaiviet\" = '$danhmucbaiviet'
+                      searchdescription,
+                      nd.msuser,
+                      houser,
+                      tenuser,
+                      emailuser
+                    FROM public.\"baiviet\" bv, public.\"nguoidung\" nd
+                    WHERE nd.msuser = bv.msuser AND bv.msdanhmucbaiviet = '$danhmucbaiviet'
                     LIMIT 6";
         $data = DB::select($query);
         return $data;
@@ -70,8 +74,8 @@ class BaiVietModel extends Model
     public function  BaiVietChiTiet(){
         $query = "SELECT
                       msbaiviet,
-                      msuser,
-                      msdanhmucbaiviet,
+                      bv.msuser,
+                      bv.msdanhmucbaiviet,
                       tieude,
                       noidung,
                       url,
@@ -81,9 +85,23 @@ class BaiVietModel extends Model
                       luotxem,
                       nhan,
                       searchtitle,
-                      searchdescription
-                    FROM public.\"baiviet\"
-                    WHERE  url = '$this->url'";
+                      searchdescription,
+                      dm.msdanhmucbaiviet,
+                      tendanhmucbaiviet,
+                      danhmucbaivietcha,
+                      urldanhmucbaiviet,
+                      tongbaiviet,
+                      shorttextdanhmuc,
+                      pagetextdanhmuc,
+                      nd.msuser,
+                      houser,
+                      tenuser,
+                      emailuser
+                    FROM public.baiviet bv, public.danhmucbaiviet dm, public.nguoidung nd
+                    WHERE bv.msdanhmucbaiviet = dm.msdanhmucbaiviet
+                      AND nd.msuser = bv.msuser
+                    AND bv.url = '$this->url'
+                    LIMIT  1";
         $data = DB::select($query);
         return $data;
     }

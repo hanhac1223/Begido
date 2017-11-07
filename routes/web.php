@@ -1,8 +1,9 @@
 <?php
 Route::get('/', "BaiVietController@LayDanhSachBaiViet");
 
-Route::get('bai-viet/{plug}',"BaiVietController@BaiVietChiTiet");
+Route::get('/bai-viet/{plug}',"BaiVietController@BaiVietChiTiet");
 
-Route::get('/damh-muc',"DanhMucController@getDanhMuc");
-
-Route::get('/damh-muc/{plug}',"DanhMucController@getDanhMuc");
+Route::prefix('/danh-muc')->group(function () {
+    Route::get('/', 'DanhMucController@DanhMucBaiVietChiTiet');
+    Route::get('/{plug}', 'DanhMucController@getDanhMuc');
+});

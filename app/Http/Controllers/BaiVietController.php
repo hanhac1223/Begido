@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BaiVietModel;
+use App\DanhMucBaiVietModel;
 use Illuminate\Http\Request;
 
 class BaiVietController extends Controller
@@ -19,11 +20,13 @@ class BaiVietController extends Controller
 
     public function BaiVietChiTiet(Request $request, $plug){
         $bv = new BaiVietModel();
+        $dm = new DanhMucBaiVietModel();
         $bv->url = $plug;
         return view("tin-tuc-chi-tiet.tin-tuc-chi-tiet",
             [
                 "BaiViet" => $bv->BaiVietChiTiet(),
-                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
+                "BaiVietLienQuan" => $bv->BaiVietLienQuan(),
+                "DanhMuc" => $dm->DanhSach(5)
             ]);
     }
 }
