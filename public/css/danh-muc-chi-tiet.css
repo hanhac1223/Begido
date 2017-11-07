@@ -1,5 +1,43 @@
-.mot-khoi {
-    margin-bottom: 42px;
+
+.khoi-gioi-thieu h3 {
+    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-decoration: none solid rgb(8, 106, 135);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+
+}
+
+.khoi-gioi-thieu p {
+    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+}
+
+.anh-gioi-thieu {
+    float:left;
+    border-radius: 50%;
+    margin-right:20px;
 }
 
 .danh-sach-tin-tuc img {
@@ -10,26 +48,67 @@
     position: relative;
 }
 
+.danh-sach-tin-tuc .mot-tin {
+    margin-bottom: 50px;
+}
+
+.tieu-de-lon a {
+    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(241, 134, 138);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color :#ef4066;
+
+}
 .danh-sach-tin-tuc .tieu-de {
+    bottom: 0px;
     position: absolute;
-    z-index: 1;
-    left: 0;
-    bottom: 0;
     padding: 10px;
-    font-size: 17px;
-    color: white;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), #434343);
-    display:block;
-    font-weight: 700;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #fff;
+    background: linear-gradient(0deg, #000 0, transparent 100%);
+    width: 100%;
+    font-size: 14px;
+    white-space: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 0px;
 }
 
 .danh-sach-tin-tuc .duoi .thong-tin {
-    margin-top: 7px;
-    font-size: 13px;
-}
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(102, 102, 102);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    padding: 5px 0px;
 
-.danh-sach-tin-tuc .duoi .thong-tin a {
-    color: black;
 }
 
 .danh-sach-tin-tuc .duoi .noi-dung-chi-tiet {
@@ -39,9 +118,24 @@
 
 
 .danh-sach-tin-tuc .duoi .noi-dung-chi-tiet  a{
-    font-size: 16px;
-    color: black;
-    text-align:justify;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
 }
 
 .gioi-thieu {
@@ -74,8 +168,39 @@
     margin-bottom:30px;
 }
 
-.khoi-tieu-de-lon .tieu-de-lon {
+.noi-dung-them .noi-dung {
+    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+}
 
+.noi-dung-them h2 {
+    font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-decoration: none solid rgb(8, 106, 135);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color :#ef4066;
 }
 
 .danh-muc-lien-quan {

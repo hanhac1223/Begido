@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\DanhMucBaiVietModel;
+
 
 class DanhMucController extends Controller
 {
@@ -11,12 +13,12 @@ class DanhMucController extends Controller
     }
 
     public function DanhSachBaiVietTheoDanhMuc(Request $request, $plug){
-        $bv = new DanhMucModel();
-        $bv->url = $plug;
+        $dm = new DanhMucBaiVietModel();
+        $dm->urldanhmucbaiviet = $plug;
         return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
             [
-                "BaiViet" => $bv->BaiVietChiTiet(),
-                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
+                "ThongTinDanhMuc"            => $dm->LayThonTinDanhMucTheoUrlDanhMuc(),
+                "DanhSachBaiVietTheoDanhMuc" => $dm->LayDanhSachBaiVietTheoUrlDanhMuc()
             ]);
     }
 }
