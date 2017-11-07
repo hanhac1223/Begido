@@ -16,8 +16,14 @@
             <div class="col-12">
                 <nav aria-label="breadcrumb" role="navigation">
                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <amp-img>
+
+                            </amp-img>
+                            <a href="../danh-muc/{!! $item->urldanhmucbaiviet !!}"></a>
+                        </li>
                         <li class="breadcrumb-item"><a href="../danh-muc/{!! $item->urldanhmucbaiviet !!}">
-                                {!! $item->tendanhmucbaiviet  !!}</a>
+                            {!! $item->tendanhmucbaiviet  !!}</a>
                         </li>
                         <li class="breadcrumb-item breadcrumb-title"><a>{!! $item->tieude  !!}</a></li>
                     </ol>
