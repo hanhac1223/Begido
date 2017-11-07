@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\BaiVietModel;
 use App\DanhMucBaiVietModel;
 use Illuminate\Http\Request;
-use App\DanhMucBaiVietModel;
-
 
 class DanhMucController extends Controller
 {
