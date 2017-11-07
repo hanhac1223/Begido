@@ -35,7 +35,7 @@
                     src="{!! $item->anhdaidien !!}"
                     alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
             </amp-img>
-            <a class="tieu-de">{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</a>
+            <a href ="" class="tieu-de">{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</a>
         </div>
         <div class="duoi">
             <div class="thong-tin">

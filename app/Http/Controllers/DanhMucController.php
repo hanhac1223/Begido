@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use App\BaiVietModel;
 use App\DanhMucBaiVietModel;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 566a98a38ff981ae63b052ba6c6b46cb3da518aa
 
 class DanhMucController extends Controller
 {
     public function getDanhMuc(){
-        echo "An Trường cứt heo quá nha";
+        echo "Không có";
     }
 
     public function DanhSachBaiVietTheoDanhMuc(Request $request, $plug){
