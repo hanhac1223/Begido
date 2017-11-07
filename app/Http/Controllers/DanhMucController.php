@@ -5,10 +5,7 @@ namespace App\Http\Controllers;
 use App\BaiVietModel;
 use App\DanhMucBaiVietModel;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 
-=======
->>>>>>> 566a98a38ff981ae63b052ba6c6b46cb3da518aa
 
 class DanhMucController extends Controller
 {
@@ -21,17 +18,17 @@ class DanhMucController extends Controller
         $dm->urldanhmucbaiviet = $plug;
         return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
             [
-                "ThongTinDanhMuc"            => $dm->LayThonTinDanhMucTheoUrlDanhMuc(),
+                "ThongTinDanhMuc"            => $dm->LayThongTinDanhMucTheoUrlDanhMuc(),
                 "DanhSachBaiVietTheoDanhMuc" => $dm->LayDanhSachBaiVietTheoUrlDanhMuc()
             ]);
     }
 
-    public function DanhMucBaiVietChiTiet(Request $request){
-        $bv = new BaiVietModel();
-        return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
-            [
-                "BaiViet" => $bv->BaiVietChiTiet(),
-                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
-            ]);
-    }
+//    public function DanhMucBaiVietChiTiet(Request $request){
+//        $bv = new BaiVietModel();
+//        return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
+//            [
+//                "BaiViet" => $bv->BaiVietChiTiet(),
+//                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
+//            ]);
+//    }
 }
