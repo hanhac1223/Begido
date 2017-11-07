@@ -1,6 +1,14 @@
 @extends('master-amp')
 @section('style-amp')
     @php( require ("../public/css/danh-muc-chi-tiet.css"))
+    <?php $sttAnh = 1; ?>
+    @foreach($DanhSachBaiVietTheoDanhMuc as $item)
+        #anh-dai-dien{{$sttAnh}}
+        {
+        background-image: url("{!! $item->anhdaidien !!}");
+        }
+        <?php $sttAnh++; ?>
+    @endforeach
 @endsection
 @section('content')
 <div class="row">
@@ -28,24 +36,28 @@
     </div>
 </div>
 <div class="row danh-sach-tin-tuc">
+    <?php $sttAnh = 1; ?>
     @foreach($DanhSachBaiVietTheoDanhMuc as $item)
     <div class="col-sm-6 col-md-6 col-lg-4 mot-tin">
         <div class="tren">
-            <amp-img
-                    src="{!! $item->anhdaidien !!}"
-                    alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
-            </amp-img>
-            <a href ="" class="tieu-de">{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</a>
+            <div class="relative background-anh-tin-tuc" id="anh-dai-dien{{$sttAnh}}">
+                <p class="tieu-de-bai-viet">
+                    {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->tieude, 25,'....')) }}
+                </p>
+            </div>
         </div>
         <div class="duoi">
             <div class="thong-tin">
                 {{ $item->ngaytaobaiviet }} | <a href="">{{ $item->tenuser }}</a>
             </div>
             <div class="noi-dung-chi-tiet">
-                <a href="">{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</a>
+                <a href="">
+                    {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->noidung, 25,'....')) }}
+                </a>
             </div>
         </div>
     </div>   {{--END mot-tin--}}
+        <?php $sttAnh++; ?>
     @endforeach
 </div> {{--END: danh-sach-tin-tuc--}}
 
