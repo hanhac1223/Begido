@@ -6,11 +6,10 @@ use App\BaiVietModel;
 use App\DanhMucBaiVietModel;
 use Illuminate\Http\Request;
 
-
 class DanhMucController extends Controller
 {
     public function getDanhMuc(){
-        echo "Không có";
+        return view('danh-muc-chi-tiet.danh-muc-chi-tiet');
     }
 
     public function DanhSachBaiVietTheoDanhMuc(Request $request, $plug){

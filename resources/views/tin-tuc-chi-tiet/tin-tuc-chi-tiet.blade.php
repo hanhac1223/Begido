@@ -17,12 +17,14 @@
                 <nav aria-label="breadcrumb" role="navigation">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <amp-img>
-
+                            <amp-img
+                                    src="{{ asset('cdn/begido-192x192.png')  }}" width="20" height="20"
+                                    layout="responsive" alt="an image">
                             </amp-img>
                             <a href="../danh-muc/{!! $item->urldanhmucbaiviet !!}"></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="../danh-muc/{!! $item->urldanhmucbaiviet !!}">
+                        <li class="breadcrumb-item">
+                            <a href="../danh-muc/{!! $item->urldanhmucbaiviet !!}">
                             {!! $item->tendanhmucbaiviet  !!}</a>
                         </li>
                         <li class="breadcrumb-item breadcrumb-title"><a>{!! $item->tieude  !!}</a></li>
