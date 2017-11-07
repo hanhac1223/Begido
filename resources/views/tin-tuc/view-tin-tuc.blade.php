@@ -1,15 +1,29 @@
 @extends('master-amp')
 @section('style-amp')
     @php( require ("../public/css/tin-tuc.css"))
+    <?php $sttSon = 1; ?>
     @foreach($Son as $item)
-        #{{$item->msbaiviet}}
+        #anh-son{{$sttSon}}
         {
-            background-attachment: scroll;
-            background-color: rgba(0, 0, 0, 0);
-            background-image: url("https://iprice-production-assets.s3-ap-southeast-1.amazonaws.com/trends-article/nhung-tinh-nang-giup-htc-one-m8-luon-la-chiec-dien-thoai-android-dang-mua-nhat.jpg");
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
+            background-image: url("{!! $item->anhdaidien !!}");
         }
+        <?php $sttSon++; ?>
+    @endforeach
+    <?php $sttMyPhamTraDiem = 1; ?>
+    @foreach($MyPhamTraDiem as $item)
+        #anh-trang-diem{{$sttMyPhamTraDiem}}
+        {
+        background-image: url("{!! $item->anhdaidien !!}");
+        }
+        <?php $sttMyPhamTraDiem++; ?>
+    @endforeach
+    <?php $sttChamSocDa = 1; ?>
+    @foreach($ChamSocDa as $item)
+        #anh-cham-soc-da{{$sttChamSocDa}}
+        {
+        background-image: url("{!! $item->anhdaidien !!}");
+        }
+        <?php $sttChamSocDa++; ?>
     @endforeach
 @endsection
 @section('content')
@@ -19,21 +33,60 @@
         </div>
     </div>
     <div class="row">
-        @foreach($Son as $item)
+        <?php $sttSon = 1; ?>
+            @foreach($Son as $item)
+                <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
+                    <a href="bai-viet/{{ $item->url  }}">
+                        <div class="relative background-anh-tin-tuc" id="anh-son{{$sttSon}}">
+                            <p class="tieu-de-bai-viet">
+                                {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->tieude, 25,'....')) }}
+                            </p>
+                        </div>
+                        <div class="noi-dung">
+                            <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | {!! $item->tenuser !!}</small>
+                            <p>
+                                {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->noidung, 25,'....')) }}
+                            </p>
+                        </div>
+                        <div class="div-tag">
+                            <?php
+                            $arrTag = explode (',', $item->nhan);
+                            foreach ($arrTag as $tag) {
+                                if( strlen(trim($tag)) > 0 ){
+                                    echo "<a class='tag' href='#'>$tag</a>";
+                                }
+                            }
+                            ?>
+                        </div>
+                    </a>
+                </div>
+                <?php $sttSon++; ?>
+            @endforeach
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h2 class="header"><a href="#">Mỹ phẩm trang điểm</a></h2>
+        </div>
+    </div>
+    <div class="row">
+        <?php $sttMyPhamTraDiem = 1; ?>
+        @foreach($MyPhamTraDiem as $item)
             <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
-                <a href="{{ $item->url  }}">
-                    <amp-img
-                            src="#" id="{{$item->msbaiviet}}"
-                            alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
-                    </amp-img>
-                    <div class="relative">
+                <a href="bai-viet/{{ $item->url  }}">
+                    <div class="relative background-anh-tin-tuc" id="anh-trang-diem{{$sttMyPhamTraDiem}}">
                         <p class="tieu-de-bai-viet">
-                            {!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}
+                            {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->tieude, 25,'....')) }}
                         </p>
                     </div>
                     <div class="noi-dung">
-                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
-                        <p>{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</p>
+                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | {!! $item->tenuser !!}</small>
+                        <p>
+                            {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->noidung, 25,'....')) }}
+                        </p>
                     </div>
                     <div class="div-tag">
                         <?php
@@ -47,48 +100,7 @@
                     </div>
                 </a>
             </div>
-        @endforeach
-        <div class="col-12">
-            <hr>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12">
-            <h2 class="header"><a href="#">Mỹ phẩm trang điểm</a></h2>
-        </div>
-    </div>
-    <div class="row">
-        @foreach($MyPhamTraDiem as $item)
-            <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
-                <a href="{{ $item->url  }}">
-                    <amp-img
-                            src="{!! $item->anhdaidien !!}"
-                            alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
-                    </amp-img>
-                    <div class="relative">
-                        <span class="tieu-de-bai-viet">
-                            <b>{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</b>
-                        </span>
-                    </div>
-                    <div class="noi-dung">
-                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
-                        <p>{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</p>
-                    </div>
-                    <?php
-                    $arrTag = explode (',', $item->nhan);
-                    foreach ($arrTag as $tag) {
-                        ?>
-                    <?php
-                        if( strlen(trim($tag)) > 0 ){
-                            echo "<a class='tag' href='#'>$tag</a>";
-                        }
-                        ?>
-                    <?php
-                    }
-                    ?>
-                </a>
-            </div>
+            <?php $sttMyPhamTraDiem++; ?>
         @endforeach
         <div class="col-12">
             <hr>
@@ -101,36 +113,34 @@
         </div>
     </div>
     <div class="row">
+        <?php $sttChamSocDa = 1; ?>
         @foreach($ChamSocDa as $item)
             <div class="col-lg-4 col-md-6 col-12 div-tin-tuc">
-                <a href="{{ $item->url  }}">
-                    <amp-img
-                            src="{!! $item->anhdaidien !!}"
-                            alt="" class="anh-tin-tuc" height="400" width="800" layout="responsive">
-                    </amp-img>
-                    <div class="relative">
-                        <span class="tieu-de-bai-viet">
-                            <b>{!! \Illuminate\Support\Str::words($item->tieude, 25,'....') !!}</b>
-                        </span>
+                <a href="bai-viet/{{ $item->url  }}">
+                    <div class="relative background-anh-tin-tuc" id="anh-cham-soc-da{{$sttChamSocDa}}">
+                        <p class="tieu-de-bai-viet">
+                            {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->tieude, 25,'....')) }}
+                        </p>
                     </div>
                     <div class="noi-dung">
-                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | Begido</small>
-                        <p>{!! \Illuminate\Support\Str::words($item->noidung, 30,'....') !!}</p>
+                        <small>{!! \Carbon\Carbon::parse($item->ngaytaobaiviet)->format('d/m/Y') !!} | {!! $item->tenuser !!}</small>
+                        <p>
+                            {{ preg_replace('/(<.*?>)|(&.*?;)/', '', \Illuminate\Support\Str::words($item->noidung, 25,'....')) }}
+                        </p>
                     </div>
-                    <?php
-                    $arrTag = explode (',', $item->nhan);
-                    foreach ($arrTag as $tag) {
-                        ?>
-                    <?php
-                        if( strlen(trim($tag)) > 0 ){
-                            echo "<a class='tag' href='#'>$tag</a>";
+                    <div class="div-tag">
+                        <?php
+                        $arrTag = explode (',', $item->nhan);
+                        foreach ($arrTag as $tag) {
+                            if( strlen(trim($tag)) > 0 ){
+                                echo "<a class='tag' href='#'>$tag</a>";
+                            }
                         }
                         ?>
-                    <?php
-                    }
-                    ?>
+                    </div>
                 </a>
             </div>
+            <?php $sttChamSocDa++; ?>
         @endforeach
     </div>
 @endsection
