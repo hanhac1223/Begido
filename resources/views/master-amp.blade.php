@@ -31,22 +31,22 @@
              tabindex="0"></amp-img>
     <ul class="menu-mobile">
         <li>
-            <a href="#">Son môi</a>
+            <a href="{{url('danh-muc/son-moi')}}">Son môi</a>
         </li>
         <li>
-            <a href="#">Mỹ phẩm trang điểm</a>
+            <a href="{{url('danh-muc/my-pham-trang-diem')}}">Mỹ phẩm trang điểm</a>
         </li>
         <li>
-            <a href="#">Chăm sóc da</a>
+            <a href="{{url('danh-muc/cham-soc-da')}}">Chăm sóc da</a>
         </li>
         <li>
-            <a href="#">Nước hoa</a>
+            <a href="{{url('danh-muc/nuoc-hoa')}}">Nước hoa</a>
         </li>
         <li>
-            <a href="#"> Làm đẹp bằng Vitamins </a>
+            <a href="{{url('danh-muc/lam-dep-bang-vitamin')}}"> Làm đẹp bằng Vitamins </a>
         </li>
         <li>
-            <a href="#"> Hướng dẫn</a>
+            <a href="{{url('/')}}"> Hướng dẫn</a>
         </li>
     </ul>
 </amp-sidebar>
@@ -54,7 +54,7 @@
     <div class="container">
         <div class="row">
             <div class="col-2">
-                <a href="/">
+                <a href="{{url('/')}}">
                     <amp-img class="logo-begido" src="{{ asset("cdn/doi-mau-begido-300x100.png")  }}" height="1" width="1" layout="responsive"></amp-img>
                 </a>
             </div>
@@ -73,22 +73,22 @@
             <div class="col-12">
                 <ul class="menu-destop">
                     <li>
-                        <a href="#">Son môi</a>
+                        <a href="{{url('danh-muc/son-moi')}}">Son môi</a>
                     </li>
                     <li>
-                        <a href="#">Mỹ phẩm trang điểm</a>
+                        <a href="{{url('danh-muc/my-pham-trang-diem')}}">Mỹ phẩm trang điểm</a>
                     </li>
                     <li>
-                        <a href="#">Chăm sóc da</a>
+                        <a href="{{url('danh-muc/cham-soc-da')}}">Chăm sóc da</a>
                     </li>
                     <li>
-                        <a href="#">Nước hoa</a>
+                        <a href="{{url('danh-muc/nuoc-hoa')}}">Nước hoa</a>
                     </li>
                     <li>
-                        <a href="#"> Làm đẹp bằng Vitamins </a>
+                        <a href="{{url('danh-muc/lam-dep-bang-vitamin')}}"> Làm đẹp bằng Vitamins </a>
                     </li>
                     <li>
-                        <a href="#"> Hướng dẫn</a>
+                        <a href="{{url('/')}}"> Hướng dẫn</a>
                     </li>
                 </ul>
             </div>

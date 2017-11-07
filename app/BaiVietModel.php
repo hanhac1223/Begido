@@ -65,13 +65,16 @@ class BaiVietModel extends Model
                       tenuser,
                       emailuser
                     FROM public.\"baiviet\" bv, public.\"nguoidung\" nd
-                    WHERE nd.msuser = bv.msuser AND bv.msdanhmucbaiviet = '$danhmucbaiviet'
+                    WHERE nd.msuser = bv.msuser AND bv.msdanhmucbaiviet = '$danhmucbaiviet' AND trangthai = 1
                     LIMIT 6";
         $data = DB::select($query);
         return $data;
     }
 
     public function  BaiVietChiTiet(){
+        $query = "UPDATE public.baiviet SET luotxem = luotxem + 1
+                      WHERE url = '$this->url'";
+        $data = DB::update($query);
         $query = "SELECT
                       msbaiviet,
                       bv.msuser,
@@ -126,7 +129,7 @@ class BaiVietModel extends Model
                         SELECT msdanhmucbaiviet
                         FROM baiviet
                         WHERE
-                          url = '$this->url')
+                          url = '$this->url') AND trangthai = 1
                     ORDER BY luotxem DESC
                     LIMIT 6";
         $data = DB::select($query);
