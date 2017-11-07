@@ -22,7 +22,7 @@
              layout="nodisplay" width="200"
              side="right">
     <amp-img class="amp-close-image"
-             src="../public/cdn/cancel-music.png"
+             src="{{asset("cdn/cancel-music.png")}}"
              width="13"
              height="13"
              alt="close sidebar"

@@ -170,3 +170,7 @@ amp-social-share {
         display: block;
     }
 }
+.tin-tuc-chi-tiet img{
+    width: 100%;
+    overflow: hidden;
+}

@@ -121,12 +121,44 @@ a{
         margin-left: 10px;
         margin-right: 10px;
         list-style: none;
+        border-bottom: 1px solid #dfdfdf;
+        padding: 3px 0px;
     }
     .menu-mobile li a{
         text-decoration: none;
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        color:  rgb(102, 102, 102);
+        text-align: start;
+        text-indent: 0px;
+        text-transform: none;
+        vertical-align: baseline;
+        white-space: normal;
+        word-spacing: 0px;
+        display: block;
+        padding-bottom: 10px;
     }
     .menu-destop, .search-icon{
         display: none;
+    }
+    amp-sidebar {
+        position: fixed!important;
+        top: 0;
+        max-height: 100vh!important;
+        height: 100vh;
+        max-width: 80vw!important;
+        background-color: #fff;
+        min-width: 45px!important;
+        outline: none;
+        overflow-x: hidden!important;
+        overflow-y: auto!important;
+        z-index: 2147483647;
+        -webkit-overflow-scrolling: touch;
+        will-change: transform;
     }
     .open-sidebar{
         display: block;
