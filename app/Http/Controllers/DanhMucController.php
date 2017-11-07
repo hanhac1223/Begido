@@ -17,17 +17,17 @@ class DanhMucController extends Controller
         $dm->urldanhmucbaiviet = $plug;
         return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
             [
-                "ThongTinDanhMuc"            => $dm->LayThonTinDanhMucTheoUrlDanhMuc(),
+                "ThongTinDanhMuc"            => $dm->LayThongTinDanhMucTheoUrlDanhMuc(),
                 "DanhSachBaiVietTheoDanhMuc" => $dm->LayDanhSachBaiVietTheoUrlDanhMuc()
             ]);
     }
 
-    public function DanhMucBaiVietChiTiet(Request $request){
-        $bv = new BaiVietModel();
-        return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
-            [
-                "BaiViet" => $bv->BaiVietChiTiet(),
-                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
-            ]);
-    }
+//    public function DanhMucBaiVietChiTiet(Request $request){
+//        $bv = new BaiVietModel();
+//        return view("danh-muc-chi-tiet.danh-muc-chi-tiet",
+//            [
+//                "BaiViet" => $bv->BaiVietChiTiet(),
+//                "BaiVietLienQuan" => $bv->BaiVietLienQuan()
+//            ]);
+//    }
 }

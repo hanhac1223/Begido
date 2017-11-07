@@ -13,7 +13,7 @@ class DanhMucBaiVietModel extends Model
     public $urldanhmucbaiviet;
     public $tongbaiviet;
 
-    public function LayThonTinDanhMucTheoUrlDanhMuc()
+    public function LayThongTinDanhMucTheoUrlDanhMuc()
     {
         $query = "SELECT msdanhmucbaiviet, 
                          tendanhmucbaiviet, 
@@ -49,7 +49,8 @@ class DanhMucBaiVietModel extends Model
         return $data;
     }
 
-    public function LayDanhSachBaiVietTheoUrlDanhMuc() {
+    public function LayDanhSachBaiVietTheoUrlDanhMuc()
+    {
         $query = "SELECT msbaiviet, 
                          tenuser, 
                          msdanhmucbaiviet, 
@@ -77,4 +78,35 @@ class DanhMucBaiVietModel extends Model
         $data = DB::select($query);
         return $data;
     }
+
+
+//    public function LayDanhSachBaiVietTheoDanhMuc() {
+//        $query = "SELECT
+//                      msbaiviet,
+//                      msuser,
+//                      msdanhmucbaiviet,
+//                      tieude,
+//                      noidung,
+//                      url,
+//                      anhdaidien,
+//                      ngaytaobaiviet,
+//                      trangthai,
+//                      luotxem,
+//                      nhan,
+//                      searchtitle,
+//                      searchdescription
+//                    FROM public.\"baiviet\"
+//                    WHERE \"msdanhmucbaiviet\" = '$this->msdanhmucbaiviet'";
+//        $data = DB::select($query);
+//        return $data;
+//    }
+
+//    public function DanhSach($limit) {
+//        $query = "SELECT  * FROM public.danhmucbaiviet
+//                    ORDER BY tongbaiviet DESC, tendanhmucbaiviet
+//                    LIMIT $limit";
+//>>>>>>> 566a98a38ff981ae63b052ba6c6b46cb3da518aa
+//        $data = DB::select($query);
+//        return $data;
+//    }
 }
